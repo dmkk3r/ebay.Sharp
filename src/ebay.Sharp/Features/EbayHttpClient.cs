@@ -1,4 +1,6 @@
-﻿using System.Xml.Serialization;
+﻿using System.Net.Http.Headers;
+using System.Text;
+using System.Xml.Serialization;
 
 namespace ebay.Sharp.Features;
 
@@ -14,20 +16,23 @@ public class EbayHttpClient {
         _httpClient.BaseAddress = new Uri(endpoint);
         _httpClient.DefaultRequestHeaders.Add("X-EBAY-SOA-OPERATION-NAME", requestName);
 
+        var xmlSerializer = new XmlSerializer(typeof(TRequest));
         await using var stringWriter = new StringWriter();
-        new XmlSerializer(typeof(TRequest)).Serialize(stringWriter, request);
-        var xmlSerialized = stringWriter.GetStringBuilder().ToString();
+        xmlSerializer.Serialize(stringWriter, request);
+        var serializedRequest = stringWriter.ToString();
 
-        var response = await _httpClient.PostAsync("", new StringContent(xmlSerialized, null, "text/xml"), cancellationToken);
-        var responseBody = await response.Content.ReadAsStringAsync();
+        var content = new StringContent(serializedRequest, Encoding.UTF8, "text/xml");
+        content.Headers.ContentType = new MediaTypeHeaderValue("text/xml");
+
+        var response = await _httpClient.PostAsync("", content, cancellationToken).ConfigureAwait(false);
+        var responseBody = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
 
         if (string.IsNullOrEmpty(responseBody)) throw new Exception("Response body is empty");
 
-        var xmlSerializer = new XmlSerializer(typeof(TResponse));
-
+        xmlSerializer = new XmlSerializer(typeof(TResponse));
         using var stringReader = new StringReader(responseBody);
         var result = (TResponse)xmlSerializer.Deserialize(stringReader);
-        
+
         return result;
     }
 }
