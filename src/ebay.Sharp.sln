@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ebay.Sharp", "ebay.Sharp\ebay.Sharp.csproj", "{1F50A018-FEDC-4CAA-8405-B88B9C200026}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ebay.Sharp.Tests", "ebay.Sharp.Tests\ebay.Sharp.Tests.csproj", "{4097B635-4EF4-43FA-AD2F-03354DE9284C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F50A018-FEDC-4CAA-8405-B88B9C200026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F50A018-FEDC-4CAA-8405-B88B9C200026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F50A018-FEDC-4CAA-8405-B88B9C200026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F50A018-FEDC-4CAA-8405-B88B9C200026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4097B635-4EF4-43FA-AD2F-03354DE9284C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4097B635-4EF4-43FA-AD2F-03354DE9284C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4097B635-4EF4-43FA-AD2F-03354DE9284C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4097B635-4EF4-43FA-AD2F-03354DE9284C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
