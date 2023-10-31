@@ -13,6 +13,8 @@ public static class ServiceCollection {
 
         services.AddSingleton(ebayConfiguration);
 
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(EbayHttpClient).Assembly));
+
         services.AddTransient<EbayHttpClient>();
         services.AddScoped<FindingService>();
 
