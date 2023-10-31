@@ -54,6 +54,8 @@ app.MapGet("/finding", async ([FromServices] FindingService findingService) => {
 
 app.Run();
 ```
+## API differences
+The traditional ebay APIs such as Finding or Trading only require an AppID and no authentication tokens for the call. To use the other APIs, an token must be passed. To facilitate this step, the following official ebay package can be used: [eBay OAuth C# Client Library](https://github.com/eBay/ebay-oauth-csharp-client)
 
 ## Implemented API Operations
 - [ ] Buy API
