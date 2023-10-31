@@ -1,5 +1,7 @@
 # ebay.Sharp
 
+[![Build and test](https://github.com/dmkk3r/ebay.Sharp/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/dmkk3r/ebay.Sharp/actions/workflows/build-and-test.yml)
+
 **ebay.Sharp** is an unofficial .NET SDK that simplifies integration with ebay's APIs, making it easier for developers to build applications and services that interact with ebay's marketplace.
 
 ## Features
