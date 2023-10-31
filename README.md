@@ -1,24 +1,24 @@
 # ebay.Sharp
 
-**eBay.Sharp** is an unofficial .NET SDK that simplifies integration with eBay's APIs, making it easier for developers to build applications and services that interact with eBay's marketplace.
+**ebay.Sharp** is an unofficial .NET SDK that simplifies integration with ebay's APIs, making it easier for developers to build applications and services that interact with ebay's marketplace.
 
 ## Features
-- Easy-to-use .NET library for eBay API integration.
-- Comprehensive support for eBay API operations.
-- [eBay API Documentation](https://developer.ebay.com/api-docs)
+- Easy-to-use .NET library for ebay API integration.
+- Comprehensive support for ebay API operations.
+- [ebay API Documentation](https://developer.ebay.com/api-docs)
 
 ## Installation
-You can install **eBay.Sharp** via NuGet Package Manager:
+You can install **ebay.Sharp** via NuGet Package Manager:
 
 ```shell
-dotnet add package eBay.Sharp
+dotnet add package ebay.Sharp
 ```
 
 ## Usage
-Here's a quick example of how to get started using eBay.Sharp to retrieve information about eBay listings:
+Here's a quick example of how to get started using ebay.Sharp to retrieve information about ebay listings:
 
 ```csharp
-using eBay.Sharp;
+using ebay.Sharp;
 
 var builder = WebApplication.CreateBuilder(args);
 
