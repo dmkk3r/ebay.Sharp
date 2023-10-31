@@ -6,7 +6,7 @@ public class EbayHttpClient {
     private readonly HttpClient _httpClient;
 
     public EbayHttpClient(IHttpClientFactory clientFactory) {
-        _httpClient = clientFactory.CreateClient("eBayClient");
+        _httpClient = clientFactory.CreateClient("ebay-client");
     }
 
     public async Task<TResponse> SendRequestAsync<TRequest, TResponse>(string requestName, TRequest request, string endpoint,
