@@ -1,9 +1,9 @@
 # ebay.Sharp
 
-**eBay.Sharp** is a .NET SDK that simplifies integration with eBay's APIs, making it easier for developers to build applications and services that interact with eBay's marketplace.
+**eBay.Sharp** is an unofficial .NET SDK that simplifies integration with eBay's APIs, making it easier for developers to build applications and services that interact with eBay's marketplace.
 
 ## Features
-- Easy-to-use .NET 7 library for eBay API integration.
+- Easy-to-use .NET library for eBay API integration.
 - Comprehensive support for eBay API operations.
 - [eBay API Documentation](https://developer.ebay.com/api-docs)
 
@@ -52,6 +52,15 @@ app.MapGet("/finding", async ([FromServices] FindingService findingService) => {
 
 app.Run();
 ```
+
+## Implemented API Operations
+- [ ] Buy API
+- [ ] Sell API
+- [ ] Commerce API
+- [ ] Developer API
+- [ ] Finding API
+- [ ] Shopping API
+- [ ] Trading API
 
 ## Contributing
 We welcome contributions from the community. If you'd like to contribute to eBay.Sharp, please follow our Contribution Guidelines.
